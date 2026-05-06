@@ -9,13 +9,11 @@ function Header() {
     <>
          <Navbar expand="sm" className="bg-primary">
       <Container>
-        <Navbar.Brand ><Link style={{textDecoration:'none', color:'white'}} to={'/'}><img src='/iase.jpeg' width={35} height={35}></img>IASE, Thrissur</Link></Navbar.Brand>
+        <Navbar.Brand ><Link style={{textDecoration:'none', color:'white'}} to={'/'}><img src='/kvasu.jpeg' width={35} height={35}></img>College of Veterinary and Animal Sciences, Mannuthy</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />        
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link><Link style={{textDecoration:'none', color:'white'}} to={'/data'}>Data</Link></Nav.Link>
-            <Nav.Link><Link style={{textDecoration:'none', color:'white'}} to={'/tc'}>TC</Link></Nav.Link>
-            <Nav.Link><Link style={{textDecoration:'none', color:'white'}} to={'/display'}>Students</Link></Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>

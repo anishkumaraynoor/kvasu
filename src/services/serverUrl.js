@@ -5,5 +5,5 @@
 
 
 
-const SERVER_URL = 'https://iasethrissur.onrender.com'
+const SERVER_URL = ''
 export default SERVER_URL

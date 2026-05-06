@@ -16,7 +16,7 @@ function Work() {
   let today = new Date().toISOString().split('T')[0]
   const [tcData, setTcData] = useState({
     tcno:"",tcdate:today,name:"",dob:"",admno:"",admdate:"",sem:"",dateleft:"",sem1:"",subject:"",
-    course:"Course Completed",due:"Yes",scholarship:"EGrants",examination:"",leftdate:"",applidate:today,
+    course:"Course Completed",due:"Yes",scholarship:"Good",examination:"",leftdate:"",applidate:today,
     issuedate:today, id:""
   })
   const [mob, setMob] = useState("")
@@ -45,7 +45,7 @@ function Work() {
                 setDuplicate("//   DUPLICATE   //")
             }else{
               setTcData({tcno:"",tcdate:today,name:"",dob:"",admno:"",admdate:"",sem:"",dateleft:"",
-              sem1:"",subject:"",course:"Course Completed",due:"Yes",scholarship:"EGrants",
+              sem1:"",subject:"",course:"Course Completed",due:"Yes",scholarship:"Good",
               examination:"",leftdate:"",applidate:today,issuedate:today, id:""})
             }
           }else{
@@ -161,18 +161,10 @@ function Work() {
         <Row>
           <Col lg={6}>
             <Row className='container'>
-            <Col className='mt-1' lg={6}>
-                <label htmlFor="">Admission No.</label><br />
-                <input onChange={e=>setTcData({...tcData, admno:e.target.value})} value={tcData.admno} className='' type="text" name="" id="" />
-              </Col>
-              <Col lg={6} >
-            <button onClick={e=>getStudent(tcData.admno)} className='btn btn-success mt-3'>Get Student</button>
-          </Col>
+            
+              
 
-              <Col className='mt-1' lg={6}>
-                <label htmlFor="">TC No.</label><br />
-                <input onChange={e=>setTcData({...tcData, tcno:e.target.value})} value={tcData.tcno} className='' type="text" name="" id="" />
-              </Col>
+              
               <Col className='mt-1' lg={6}>
               <label htmlFor="">Date</label><br />
                 <input onChange={e=>setTcData({...tcData, tcdate:e.target.value})} value={tcData.tcdate} className='' type="date" name="tcdate" id="" />
@@ -182,17 +174,18 @@ function Work() {
                 <input onChange={e=>setTcData({...tcData, name:e.target.value})} value={tcData.name} className='' type="text" name="" id="" />
               </Col>
               <Col className='mt-1' lg={6}>
+                <label htmlFor="">Admission No.</label><br />
+                <input onChange={e=>setTcData({...tcData, admno:e.target.value})} value={tcData.admno} className='' type="text" name="" id="" />
+              </Col>
+              <Col className='mt-1' lg={6}>
               <label htmlFor="">Date of Birth</label><br />
                 <input onChange={e=>setTcData({...tcData, dob:e.target.value})} value={tcData.dob} className='' type="date" name="dob" id="" />
               </Col>
 
               
+              
               <Col className='mt-1' lg={6}>
-              <label htmlFor="">Admitted On</label><br />
-                <input onChange={e=>setTcData({...tcData, admdate:e.target.value})} value={tcData.admdate} className='' type="date" name="admdate" id="" />
-              </Col>
-              <Col className='mt-1' lg={6}>
-                <label htmlFor="">into class</label><br />
+                <label htmlFor="">Class</label><br />
                 <select onChange={e=>setTcData({...tcData, sem:e.target.value})} value={tcData.sem} name="" id="">
                 <option value="">--select--</option>
                 <option value="I B.Ed." >I B.Ed.</option>
@@ -204,26 +197,11 @@ function Work() {
               </select>
               </Col>
               <Col className='mt-1' lg={6}>
-              <label htmlFor="">Left On</label><br />
-                <input onChange={e=>setTcData({...tcData, dateleft:e.target.value, leftdate:e.target.value})} value={tcData.dateleft} className='' type="date" name="dateleft" id="" />
-              </Col>
-              <Col className='mt-1' lg={6}>
-                <label htmlFor="">from class</label><br />
-                <select onChange={e=>setTcData({...tcData, sem1:e.target.value})} value={tcData.sem1} name="" id="">
-                <option value="">--select--</option>
-                <option value="I B.Ed.">I B.Ed.</option>
-                <option value="II B.Ed.">II B.Ed.</option>
-                <option value="I M.Ed.">I M.Ed.</option>
-                <option value="II M.Ed.">II M.Ed.</option>
-                <option value="I Ph.D.">I Ph.D.</option>
-                <option value="II Ph.D.">II Ph.D.</option>
-              </select>
+              <label htmlFor="">Date of Admission</label><br />
+                <input onChange={e=>setTcData({...tcData, admdate:e.target.value})} value={tcData.admdate} className='' type="date" name="admdate" id="" />
               </Col>
 
-              <Col className='mt-1' lg={6}>
-                <label htmlFor="">Subject</label><br />
-                <input onChange={e=>setTcData({...tcData, subject:e.target.value})} value={tcData.subject} className='' type="text" name="" id="" />
-              </Col>
+              
               <Col className='mt-1' lg={6}>
               <label htmlFor="">Whether qualified</label><br />
               <select onChange={e=>setTcData({...tcData, course:e.target.value})} name="" id="">
@@ -238,40 +216,50 @@ function Work() {
                 <option value="No">No</option>
               </select>
               </Col>
-              <Col className='mt-1' lg={6}>
-              <label htmlFor="">Whether any scholarship</label><br />
-              <select onChange={e=>setTcData({...tcData, scholarship:e.target.value})} name="" id="">
-                <option value="EGrants">EGrants</option>
-                <option value="Nil">Nil</option>
-              </select>
-              </Col>
+
+              
 
               <Col className='mt-1' lg={6}>
                 <label htmlFor="">Name of Examination</label><br />
                 <input onChange={e=>setTcData({...tcData, examination:e.target.value})} value={tcData.examination} className='' type="text" name="" id="" />
               </Col>
               <Col className='mt-1' lg={6}>
-              <label htmlFor="">Date on which actually left</label><br />
-                <input onChange={e=>setTcData({...tcData, leftdate:e.target.value})} value={tcData.leftdate} className='' type="date" name="leftdate" id="" />
+              <label htmlFor="">Date of Completion of Course</label><br />
+                <input onChange={e=>setTcData({...tcData, leftdate:e.target.value, dateleft:e.target.value})} value={tcData.leftdate} className='' type="date" name="leftdate" id="" />
               </Col>
+              <Col className='mt-1' lg={6}>
+                <label htmlFor="">Reason for Transfer</label><br />
+                <input onChange={e=>setTcData({...tcData, subject:e.target.value})} value={tcData.subject} className='' type="text" name="" id="" />
+              </Col>
+
+
+
+
+              <Col className='mt-1' lg={6}>
+              <label htmlFor="">Character</label><br />
+              <select onChange={e=>setTcData({...tcData, scholarship:e.target.value})} name="" id="">
+                <option value="Good">Good</option>
+                <option value="Very Good">Very Good</option>
+              </select>
+              </Col>
+
+
               <Col className='mt-1' lg={6}>
                 <label htmlFor="">Date of application for TC</label><br />
                 <input onChange={e=>setTcData({...tcData, applidate:e.target.value})} value={tcData.applidate} className='' type="date" name="applidate" id="" />
               </Col>
               <Col className='mt-1' lg={6}>
-              <label htmlFor="">Date of issue of TC</label><br />
-                <input onChange={e=>setTcData({...tcData, issuedate:e.target.value})} value={tcData.issuedate} className='' type="date" name="issuedate" id="" />
+              <label htmlFor="">Date of Leaving</label><br />
+                <input onChange={e=>setTcData({...tcData, dateleft:e.target.value})} value={tcData.dateleft} className='' type="date" name="dateleft" id="" />
               </Col>
+
+
+
             </Row>
           </Col>
           <Col lg={6} >
-            <Row>
-            <Col className='mt-1' lg={6}>
-              <label htmlFor="">Mobile No.</label><br />
-                <input onChange={e=>setMob(e.target.value)} value={mob} className='' type="text" id="" />
-              </Col>
-            </Row>
-            <button onClick={e=>getStudent(mob)} className='btn btn-success mt-3'>Get Student by Phone Number</button><br />
+            
+            
             <button onClick={generateDocument} className='btn btn-primary mt-3'>TC</button>
             <button onClick={generateCC} className='btn btn-warning mt-3'>Conduct Certificate</button>
           </Col>
