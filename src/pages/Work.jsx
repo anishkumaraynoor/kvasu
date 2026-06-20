@@ -15,8 +15,8 @@ function loadFile(url, callback) {
 function Work() {
   let today = new Date().toISOString().split('T')[0]
   const [tcData, setTcData] = useState({
-    tcno:"",tcdate:today,name:"",dob:"",admno:"",admdate:"",sem:"",dateleft:"",sem1:"",subject:"",
-    course:"Course Completed",due:"Yes",scholarship:"Good",examination:"",leftdate:"",applidate:today,
+    tcno:"",tcdate:today,name:"",dob:"",admno:"",admdate:"",sem:"",dateleft:"",sem1:"",subject:"Course Completed",
+    course:"Yes",due:"Yes",scholarship:"Satisfactory",examination:"",leftdate:"",applidate:today,
     issuedate:today, id:""
   })
   const [mob, setMob] = useState("")
@@ -45,7 +45,7 @@ function Work() {
                 setDuplicate("//   DUPLICATE   //")
             }else{
               setTcData({tcno:"",tcdate:today,name:"",dob:"",admno:"",admdate:"",sem:"",dateleft:"",
-              sem1:"",subject:"",course:"Course Completed",due:"Yes",scholarship:"Good",
+              sem1:"",subject:"Course Completed",course:"Yes",due:"Yes",scholarship:"Satisfactory",
               examination:"",leftdate:"",applidate:today,issuedate:today, id:""})
             }
           }else{
@@ -142,7 +142,7 @@ function Work() {
         });
         
         
-        doc.render({...tcData, admdate:formatDate(tcData.admdate),
+        doc.render({...tcData, tcdate:formatDate(tcData.tcdate), admdate:formatDate(tcData.admdate),
           leftdate:formatDate(tcData.leftdate), 
           issuedate:formatDate(tcData.issuedate), sem:tcData.sem.split(' ')[1]});
         const out = doc.getZip().generate({
@@ -186,14 +186,22 @@ function Work() {
               
               <Col className='mt-1' lg={6}>
                 <label htmlFor="">Class</label><br />
-                <select onChange={e=>setTcData({...tcData, sem:e.target.value})} value={tcData.sem} name="" id="">
+                <select onChange={e=>setTcData({...tcData, sem:e.target.value, examination:e.target.value})} value={tcData.sem} name="" id="">
                 <option value="">--select--</option>
-                <option value="I B.Ed." >I B.Ed.</option>
-                <option value="II B.Ed." >II B.Ed.</option>
-                <option value="I M.Ed." >I M.Ed.</option>
-                <option value="II M.Ed." >II M.Ed.</option>
-                <option value="I Ph.D." >I Ph.D.</option>
-                <option value="II Ph.D." >II Ph.D.</option>
+                <option value="BVSc & AH" >BVSc & AH</option>
+                <option value="MVSc" >MVSc</option>
+                <option value="PhD" >PhD</option>
+                <option value="Diploma in Diary Sciences" >Diploma in Diary Sciences</option>
+                <option value="Diploma in Feed Technology" >Diploma in Feed Technology</option>
+                <option value="Diploma in Laboratory Techniques" >Diploma in Laboratory Techniques</option>
+                <option value="MSc" >MSc</option>
+                <option value="Animal Sciences" >Animal Sciences</option>
+                <option value="Animal Biotechnology" >Animal Biotechnology</option>
+                <option value="Applied Microbiology" >Applied Microbiology</option>
+                <option value="Applied Toxicology" >Applied Toxicology</option>
+                <option value="Biochemistry & Molecular Biology" >Biochemistry & Molecular Biology</option>
+                <option value="Quality Control in Diary Industries" >Quality Control in Diary Industries</option>
+                <option value="Biostatistics" >Biostatistics</option>
               </select>
               </Col>
               <Col className='mt-1' lg={6}>
@@ -205,8 +213,8 @@ function Work() {
               <Col className='mt-1' lg={6}>
               <label htmlFor="">Whether qualified</label><br />
               <select onChange={e=>setTcData({...tcData, course:e.target.value})} name="" id="">
-                <option value="Course Completed">Course Completed</option>
-                <option value="Discontinued">Discontinued</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
               </select>
               </Col>
               <Col className='mt-1' lg={6}>
@@ -229,7 +237,10 @@ function Work() {
               </Col>
               <Col className='mt-1' lg={6}>
                 <label htmlFor="">Reason for Transfer</label><br />
-                <input onChange={e=>setTcData({...tcData, subject:e.target.value})} value={tcData.subject} className='' type="text" name="" id="" />
+                <select onChange={e=>setTcData({...tcData, subject:e.target.value})} name="" id="">
+                <option value="Course Completed">Course Completed</option>
+                <option value="Discontinued">Discontinued</option>
+              </select>
               </Col>
 
 
@@ -238,8 +249,8 @@ function Work() {
               <Col className='mt-1' lg={6}>
               <label htmlFor="">Character</label><br />
               <select onChange={e=>setTcData({...tcData, scholarship:e.target.value})} name="" id="">
+                <option value="Satisfactory">Satisfactory</option>
                 <option value="Good">Good</option>
-                <option value="Very Good">Very Good</option>
               </select>
               </Col>
 
