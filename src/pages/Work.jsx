@@ -194,14 +194,13 @@ function Work() {
                 <option value="Diploma in Diary Sciences" >Diploma in Diary Sciences</option>
                 <option value="Diploma in Feed Technology" >Diploma in Feed Technology</option>
                 <option value="Diploma in Laboratory Techniques" >Diploma in Laboratory Techniques</option>
-                <option value="MSc" >MSc</option>
-                <option value="Animal Sciences" >Animal Sciences</option>
-                <option value="Animal Biotechnology" >Animal Biotechnology</option>
-                <option value="Applied Microbiology" >Applied Microbiology</option>
-                <option value="Applied Toxicology" >Applied Toxicology</option>
-                <option value="Biochemistry & Molecular Biology" >Biochemistry & Molecular Biology</option>
-                <option value="Quality Control in Diary Industries" >Quality Control in Diary Industries</option>
-                <option value="Biostatistics" >Biostatistics</option>
+                <option value="MSc Animal Sciences" >MSc Animal Sciences</option>
+                <option value="MSc Animal Biotechnology" >MSc Animal Biotechnology</option>
+                <option value="MSc Applied Microbiology" >MSc Applied Microbiology</option>
+                <option value="MSc Applied Toxicology" >MSc Applied Toxicology</option>
+                <option value="MSc Biochemistry & Molecular Biology" >MSc Biochemistry & Molecular Biology</option>
+                <option value="MSc Quality Control in Diary Industry" >MSc Quality Control in Diary Industry</option>
+                <option value="MSc Biostatistics" >MSc Biostatistics</option>
               </select>
               </Col>
               <Col className='mt-1' lg={6}>
