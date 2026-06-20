@@ -143,7 +143,7 @@ function Work() {
         
         
         doc.render({...tcData, tcdate:formatDate(tcData.tcdate), admdate:formatDate(tcData.admdate),
-          leftdate:formatDate(tcData.leftdate), 
+          leftdate:formatDate(tcData.leftdate), dateleft:formatDate(tcData.dateleft),
           issuedate:formatDate(tcData.issuedate), sem:tcData.sem.split(' ')[1]});
         const out = doc.getZip().generate({
           type: 'blob',
