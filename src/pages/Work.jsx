@@ -191,15 +191,15 @@ function Work() {
                 <option value="BVSc & AH" >BVSc & AH</option>
                 <option value="MVSc" >MVSc</option>
                 <option value="PhD" >PhD</option>
-                <option value="Diploma in Diary Sciences" >Diploma in Diary Sciences</option>
+                <option value="Diploma in Dairy Science" >Diploma in Dairy Science</option>
                 <option value="Diploma in Feed Technology" >Diploma in Feed Technology</option>
                 <option value="Diploma in Laboratory Techniques" >Diploma in Laboratory Techniques</option>
-                <option value="MSc Animal Sciences" >MSc Animal Sciences</option>
+                <option value="MSc Animal Science" >MSc Animal Science</option>
                 <option value="MSc Animal Biotechnology" >MSc Animal Biotechnology</option>
                 <option value="MSc Applied Microbiology" >MSc Applied Microbiology</option>
                 <option value="MSc Applied Toxicology" >MSc Applied Toxicology</option>
                 <option value="MSc Biochemistry & Molecular Biology" >MSc Biochemistry & Molecular Biology</option>
-                <option value="MSc Quality Control in Diary Industry" >MSc Quality Control in Diary Industry</option>
+                <option value="MSc Quality Control in Dairy Industry" >MSc Quality Control in Dairy Industry</option>
                 <option value="MSc Biostatistics" >MSc Biostatistics</option>
               </select>
               </Col>
