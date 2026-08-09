@@ -194,7 +194,7 @@ function Work() {
                 <option value="Diploma in Dairy Science" >Diploma in Dairy Science</option>
                 <option value="Diploma in Feed Technology" >Diploma in Feed Technology</option>
                 <option value="Diploma in Laboratory Techniques" >Diploma in Laboratory Techniques</option>
-                <option value="MSc Animal Science" >MSc Animal Science</option>
+                <option value="MSc Animal Sciences" >MSc Animal Sciences</option>
                 <option value="MSc Animal Biotechnology" >MSc Animal Biotechnology</option>
                 <option value="MSc Applied Microbiology" >MSc Applied Microbiology</option>
                 <option value="MSc Applied Toxicology" >MSc Applied Toxicology</option>
